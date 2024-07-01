@@ -1,0 +1,33 @@
+﻿@model List<PRACTICA2_JN_WEB.Entities.Vehiculo>
+
+@{
+    ViewData["Title"] = "ConsultarVehiculos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table id="TablaVehiculos" class="table table-hover">
+    <thead>
+        <tr>
+            <th>Cedula</th>
+            <th>Nombre</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Precio</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Cedula</td>
+                <td>@item.Nombre</td>
+                <td>@item.Marca</td>
+                <td>@item.Modelo</td>
+                <td>@item.Precio</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script src="~/page/vendor/jquery/jquery.min.js"></script>
+<script src="~/page/js/DataTable.js"></script>
